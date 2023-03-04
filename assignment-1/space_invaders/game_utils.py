@@ -1,3 +1,4 @@
+import os
 import pygame
 from pygame.locals import *
 from button import Button
@@ -41,7 +42,7 @@ def show_confirm_quit_prompt(game):
     )
 
     # create font objects
-    prompt_font = pygame.font.Font('assets/font/Poultrygeist.ttf', 32)
+    prompt_font = pygame.font.Font(os.getcwd() + '/assets/font/Poultrygeist.ttf', 32)
 
     # create text objects
     prompt_text = prompt_font.render(

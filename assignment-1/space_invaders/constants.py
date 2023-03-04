@@ -1,8 +1,11 @@
+import os
+
+
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 DARK_GRAY = (64, 64, 64)
 TEXT_FONT_SIZE = 32
-TEXT_FONT = 'assets/font/Poultrygeist.ttf'
+TEXT_FONT = os.getcwd() + '/assets/font/Poultrygeist.ttf'
 
 # setting the game window size
 WINDOW_WIDTH = 1200

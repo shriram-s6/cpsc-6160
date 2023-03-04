@@ -1,3 +1,4 @@
+import os
 import pygame
 from pygame.sprite import Sprite
 
@@ -9,7 +10,7 @@ class AlienBullet(Sprite):
 
     def __init__(self, x_cord, y_cord, bullets):
         super().__init__()
-        self.image = pygame.image.load('assets/images/red_bullet.png')
+        self.image = pygame.image.load(os.getcwd() + '/assets/images/red_bullet.png')
         self.rect = self.image.get_rect(center=(x_cord, y_cord))
 
         self.velocity = constants.BULLET_VELOCITY

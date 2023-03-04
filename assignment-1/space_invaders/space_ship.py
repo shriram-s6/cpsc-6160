@@ -1,3 +1,4 @@
+import os
 import random
 import pygame
 import constants
@@ -8,7 +9,7 @@ class SpaceShip(pygame.sprite.Sprite):
 
     def __init__(self, bullets):
         super().__init__()
-        self.image = pygame.image.load('assets/images/space-ship.png')
+        self.image = pygame.image.load(os.getcwd() + '/assets/images/space-ship.png')
         self.rect = self.image.get_rect()
         self.rect.centerx = constants.WINDOW_WIDTH // 2
         self.rect.bottom = constants.WINDOW_HEIGHT
@@ -17,7 +18,7 @@ class SpaceShip(pygame.sprite.Sprite):
         self.movement_speed = 8
 
         self.bullets = bullets
-        self.shoot_sound = pygame.mixer.Sound('assets/music/spaceship_fire.wav')
+        self.shoot_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/spaceship_fire.wav')
 
     def update(self):
         keys = pygame.key.get_pressed()

@@ -1,3 +1,4 @@
+import os
 import random
 import pygame
 import game_utils
@@ -11,7 +12,7 @@ class Alien(pygame.sprite.Sprite):
         super().__init__()
 
         # Load and scale alien image
-        self.image = game_utils.get_scaled_image(pygame.image.load('assets/images/alien.png'), 0.75)
+        self.image = game_utils.get_scaled_image(pygame.image.load(os.getcwd() + '/assets/images/alien.png'), 0.75)
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
 
@@ -23,7 +24,7 @@ class Alien(pygame.sprite.Sprite):
         self.velocity = velocity
         self.bullets = bullets
         self.music_on = False
-        self.shoot_sound = pygame.mixer.Sound('assets/music/alien_fire.wav')
+        self.shoot_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/alien_fire.wav')
 
     def update(self):
         """Update the position of the alien"""

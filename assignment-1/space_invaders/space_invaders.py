@@ -1,3 +1,4 @@
+import os
 import pygame
 import constants
 import game_loops
@@ -43,13 +44,13 @@ class Game:
             self.set_music()
 
         # load music files and set sounds
-        self.progress_sound = pygame.mixer.Sound('assets/music/progress.wav')
-        self.breach_sound = pygame.mixer.Sound('assets/music/breach.wav')
-        self.alien_hit_sound = pygame.mixer.Sound('assets/music/alien_hit.wav')
-        self.spaceship_hit_sound = pygame.mixer.Sound('assets/music/spaceship_hit.wav')
+        self.progress_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/progress.wav')
+        self.breach_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/breach.wav')
+        self.alien_hit_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/alien_hit.wav')
+        self.spaceship_hit_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/spaceship_hit.wav')
 
         # load heart image
-        self.full_heart = game_utils.get_scaled_image(pygame.image.load('assets/images/full_heart.png').convert_alpha(),
+        self.full_heart = game_utils.get_scaled_image(pygame.image.load(os.getcwd() + '/assets/images/full_heart.png').convert_alpha(),
                                                       constants.SCALE)
 
         self.font = pygame.font.Font(constants.TEXT_FONT, constants.TEXT_FONT_SIZE)

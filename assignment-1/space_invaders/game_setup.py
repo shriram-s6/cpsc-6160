@@ -1,10 +1,10 @@
 import pygame
 import game_utils
 from button import Button
-from menu_cursors import MenuCursor
 from prompt import Prompt
 from space_ship import SpaceShip
 import constants
+import os
 
 # Initialize Pygame
 pygame.mixer.init()
@@ -15,7 +15,7 @@ window_width = constants.WINDOW_WIDTH
 window_height = constants.WINDOW_HEIGHT
 display_surface = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption('Space Invaders')
-background = pygame.image.load('assets/images/background.jpg')
+background = pygame.image.load(os.getcwd() + '/assets/images/background.jpg')
 
 # Set FPS and clock
 FPS = constants.FPS
@@ -67,5 +67,5 @@ back_button = Button(50, y_cord=50, width=constants.BUTTON_WIDTH,
 
 
 # Set up music object and state variable
-music = pygame.mixer.Sound('assets/music/progress.wav')
+music = pygame.mixer.Sound(os.getcwd() + '/assets/music/progress.wav')
 music.set_volume(0.5)
