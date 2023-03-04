@@ -23,8 +23,7 @@ class Alien(pygame.sprite.Sprite):
         self.direction = 1
         self.velocity = velocity
         self.bullets = bullets
-        self.music_on = False
-        self.shoot_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/alien_fire.wav')
+        
 
     def update(self):
         """Update the position of the alien"""

@@ -16,7 +16,6 @@ def game_intro_loop(game, restart_game=False):
         game.start_new_round()
         main_game_loop(game)
 
-    music_on = False
     pygame.display.set_caption('Space Invaders')
     player_name_input_text = Prompt('Name:').prompt_text
     player_name_input_rect = player_name_input_text.get_rect()
@@ -55,17 +54,16 @@ def game_intro_loop(game, restart_game=False):
                     leaderboard_loop(game)
                     intro_loop_running = False
                 elif game_setup.music_button.rect.collidepoint(mouse_position):
-                    music_on = not music_on
-                    if music_on:
+                    if not game_setup.game_music_controller.music_on:
                         game_setup.music_button.text = 'ON'
                         game_setup.music_button.active_color = (0, 255, 0)
                         game_setup.music_button.inactive_color = (0, 200, 0)
-                        game_setup.music.play(-1, 0)
+                        game_setup.game_music_controller.toggle_music()
                     else:
                         game_setup.music_button.text = 'OFF'
                         game_setup.music_button.active_color = (255, 0, 0)
-                        game_setup.music_button.inactive_color = (200, 0, 0)
-                        game_setup.music.stop()
+                        game_setup.music_button.inactive_color = (255, 0, 0)
+                        game_setup.game_music_controller.toggle_music()
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_BACKSPACE:

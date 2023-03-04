@@ -13,12 +13,9 @@ class SpaceShip(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = constants.WINDOW_WIDTH // 2
         self.rect.bottom = constants.WINDOW_HEIGHT
-        self.music_on = False
         self.lives = 5
         self.movement_speed = 8
-
         self.bullets = bullets
-        self.shoot_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/spaceship_fire.wav')
 
     def update(self):
         keys = pygame.key.get_pressed()

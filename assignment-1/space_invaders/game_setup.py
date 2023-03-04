@@ -1,6 +1,7 @@
 import pygame
 import game_utils
 from button import Button
+from music_controller import MusicController
 from prompt import Prompt
 from space_ship import SpaceShip
 import constants
@@ -65,7 +66,4 @@ back_button = Button(50, y_cord=50, width=constants.BUTTON_WIDTH,
                       height=constants.BUTTON_HEIGHT, inactive_color='#6b7280',
                       active_color='#6b7280', text='Back')
 
-
-# Set up music object and state variable
-music = pygame.mixer.Sound(os.getcwd() + '/assets/music/progress.wav')
-music.set_volume(0.5)
+game_music_controller = MusicController()

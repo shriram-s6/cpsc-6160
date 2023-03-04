@@ -10,3 +10,4 @@ if __name__ == '__main__':
     game_loops.game_intro_loop(game)
     # end the game
     pygame.quit()
+ 

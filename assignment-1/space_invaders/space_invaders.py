@@ -38,16 +38,7 @@ class Game:
         self.space_ship_bullet_group = space_ship_bullet_group
         self.alien_bullet_group = alien_bullet_group
         self.background = pygame.image.load('assets/images/background.jpg')
-        self.music_on = False
-
-        if self.music_on:
-            self.set_music()
-
-        # load music files and set sounds
-        self.progress_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/progress.wav')
-        self.breach_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/breach.wav')
-        self.alien_hit_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/alien_hit.wav')
-        self.spaceship_hit_sound = pygame.mixer.Sound(os.getcwd() + '/assets/music/spaceship_hit.wav')
+        self.background_music_on = False
 
         # load heart image
         self.full_heart = game_utils.get_scaled_image(pygame.image.load(os.getcwd() + '/assets/images/full_heart.png').convert_alpha(),
@@ -108,19 +99,19 @@ class Game:
 
             # aliens breached the line
             if breach:
-                if self.music_on:
+                if self.background_music_on:
                     self.breach_sound.play()
                 self.space_ship.lives -= 1
 
     def check_collisions(self):
         if pygame.sprite.groupcollide(self.space_ship_bullet_group, self.aliens, True, True):
-            if self.music_on:
+            if self.background_music_on:
                 self.alien_hit_sound.play()
             self.score += 10
 
         # see if the player has collided with any bullet in the alien bullet group
         if pygame.sprite.spritecollide(self.space_ship, self.alien_bullet_group, True):
-            if self.music_on:
+            if self.background_music_on:
                 self.spaceship_hit_sound.play()
             self.space_ship.lives -= 1
 
@@ -216,6 +207,3 @@ class Game:
             yes_button.draw(self.display_surface)
             no_button.draw(self.display_surface)
             pygame.display.update()
-
-    def set_music(self):
-        self.space_ship.music_on = True
