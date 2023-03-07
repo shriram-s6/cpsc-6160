@@ -38,7 +38,13 @@ Run the following command to install the required packages.
 
 Space Invaders is a classic arcade game many have enjoyed playing for years. The simplicity and challenge of the game inspired me to create my own version of it using Python and Pygame. As this is the first game I am developing, I wanted to build a game that's not easy or difficult but still allows me to learn about the basics of game development. I learned a lot about developing a simple game, which has given me the confidence to build more complex games.
 
+## Reasoning behind the structure:
+
+I structured the game using object-oriented programming principles to keep the code organized and modular. I created separate classes for the player, enemy, bullet objects. The game loop and event handling were implemented in the main GameLoop class. This approach allowed me to easily add new features and modify existing ones as needed.
+
 ## Generalization
+
+The game Space Invaders can be generalized to other types of games or applications by modifying the classes and functions to fit the specific requirements of the new game or application. For example, the player class can be modified to fit a platformer game by adding jumping and climbing abilities, while the enemy class can be modified to fit a tower defense game by adding different types of enemies with unique strengths and weaknesses.
 
 The screenshot below is the Space Invaders introduction screen. The user can click start to directly start the game or change the game settings through other options.
 
@@ -77,11 +83,10 @@ The game ends once the user loses all 5 lives. The user will see a prompt of the
 ![image](https://user-images.githubusercontent.com/86624773/223519723-7b256013-a996-411b-bd3d-ffddd103a84c.png)
 
 
-
 ## Future enhancements
 
-In the future, I plan to add the following features to the game:
+There are several ways that the game can be further enhanced:
 
-* Power-ups for the player's spaceship
-* Different types of aliens with unique abilities
+* Adding power-ups or upgrades that enhance player's spaceship
+* Adding different types of aliens with unique abilities and behaviors
 * Boss battles at the end of each level
