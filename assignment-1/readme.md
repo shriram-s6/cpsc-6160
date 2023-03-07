@@ -34,13 +34,40 @@ Run the following command to install the required packages.
 
 ## Generalization
 
+The screenshot below is the Space Invaders introduction screen. The user can click start to directly start the game or change the game settings through other options.
+
 ![image](https://user-images.githubusercontent.com/86624773/223448810-21b0c4b2-2ba2-475e-8933-3b240bff2a67.png)
+
+The user can change the username by editing the name user input field.
+
 ![image](https://user-images.githubusercontent.com/86624773/223518312-05a0dbe2-f6c8-42b3-a636-793698bf9752.png)
+
+The user can click on the music toggle to turn the background and shoot music on or off.
+
 ![image](https://user-images.githubusercontent.com/86624773/223518383-2352a2e8-95a9-4a05-b745-c0fc5d2a90b4.png)
+
+The user can click on the leaderboard button to see the top 10 scores in the game. The scores will be written into a CSV file, and the top 10 scores will be pulled from the CSV file every time the user visits the leaderboard.
+
 ![image](https://user-images.githubusercontent.com/86624773/223518458-280ace42-b71a-4a5a-a8b5-6a9e671794b9.png)
+
+The user can click on the controls button to see the game controls.
+
 ![image](https://user-images.githubusercontent.com/86624773/223518528-97fd025c-a03d-4493-a601-7331125e3d26.png)
+
+Once the user is familiar with the game controls and settings, the user can click the start button to play the game. The user can click the quit button to exit the game directly.
+
 ![image](https://user-images.githubusercontent.com/86624773/223518611-f68cc93b-c62c-4dd9-987c-9f802498051d.png)
+
+A screenshot of the actual game.
+
 ![image](https://user-images.githubusercontent.com/86624773/223518757-535c9f3b-4ff6-4cf1-9565-3ea7525a5af7.png)
+
+At any moment in the game, the user can click the quit or escape buttons to exit the game. The user will get a prompt to confirm if the user wants to quit the game, and the user can press the cancel button to continue playing the game.
+
+![image](https://user-images.githubusercontent.com/86624773/223526235-a5940582-cc6c-493a-ae9f-2dd69190ff1b.png)
+
+The game ends once the user loses all 5 lives. The user will see a prompt of the current game score and can restart the game or quit to proceed to the main menu.
+
 ![image](https://user-images.githubusercontent.com/86624773/223519723-7b256013-a996-411b-bd3d-ffddd103a84c.png)
 
 
