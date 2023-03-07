@@ -1,7 +1,6 @@
 import os
 import pygame
 import constants
-import game_loops
 import game_setup
 import game_utils
 import leaderboard
@@ -24,7 +23,7 @@ def singleton(cls):
 @singleton
 class Game:
 
-    def __init__(self, space_ship, aliens, space_ship_bullet_group, alien_bullet_group, display_surface,
+    def __init__(self, space_ship, aliens, space_ship_bullet_group, alien_bullet_group, display_surface, game_loop,
                  spaceship_name='Anonymous'):
 
         # define game variables
@@ -39,6 +38,7 @@ class Game:
         self.alien_bullet_group = alien_bullet_group
         self.background = pygame.image.load('assets/images/background.jpg')
         self.background_music_on = False
+        self.game_loop = game_loop
 
         # load heart image
         self.full_heart = game_utils.get_scaled_image(pygame.image.load(os.getcwd() + '/assets/images/full_heart.png').convert_alpha(),
@@ -194,14 +194,14 @@ class Game:
                         game.score = 0
                         show_prompt_loop = False
                         game.start_new_round()
-                        game_loops.main_game_loop(game)
+                        self.game_loop.start_main_loop()
 
                     elif no_button.rect.collidepoint(mouse_pos):
                         self.space_ship.lives = 5
                         self.round_number = 1
                         self.score = 0
                         show_prompt_loop = False
-                        game_loops.game_intro_loop(self)
+                        self.game_loop.start_intro_loop()
 
             # draw buttons
             yes_button.draw(self.display_surface)

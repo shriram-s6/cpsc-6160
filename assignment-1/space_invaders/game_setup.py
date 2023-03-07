@@ -46,6 +46,35 @@ music_text_rect = music_text.get_rect()
 music_text_rect.center = (window_width // 2 - 100, 350)
 
 
+player_name_input_text = Prompt('Name:').prompt_text
+player_name_input_rect = player_name_input_text.get_rect()
+player_name_input_rect.center = (window_width // 2 - 100, 275)
+player_name_rect = pygame.Rect(game_utils.get_start_quit_button_coords()[1], 250, 300, 50)
+
+
+# Create the text for the controls screen
+controls_title_font = pygame.font.Font(constants.TEXT_FONT, 50)
+controls_title_text = controls_title_font.render('Controls', True, constants.WHITE)
+controls_title_rect = controls_title_text.get_rect()
+controls_title_rect.centerx = constants.WINDOW_WIDTH // 2
+controls_title_rect.top = 50
+
+text_font = pygame.font.Font(constants.TEXT_FONT, 24)
+left_key = text_font.render('LEFT ARROW - Move Left', True, constants.WHITE)
+left_key_rect = left_key.get_rect()
+left_key_rect.centerx = constants.WINDOW_WIDTH // 2
+left_key_rect.top = 150
+
+right_key = text_font.render('RIGHT ARROW - Move Right', True, constants.WHITE)
+right_key_rect = right_key.get_rect()
+right_key_rect.centerx = constants.WINDOW_WIDTH // 2
+right_key_rect.top = left_key_rect.bottom + 30
+
+space_key = text_font.render('SPACE - Fire', True, constants.WHITE)
+space_key_rect = space_key.get_rect()
+space_key_rect.centerx = constants.WINDOW_WIDTH // 2
+space_key_rect.top = right_key_rect.bottom + 30
+
 start_button = Button(x_cord=game_utils.get_start_quit_button_coords()[0], y_cord=575, width=constants.BUTTON_WIDTH,
                       height=constants.BUTTON_HEIGHT, inactive_color='#00FF7F',
                       active_color=(0, 255, 0), text='Start', font_color=(255, 255, 255))
