@@ -46,11 +46,11 @@ music_text_rect = music_text.get_rect()
 music_text_rect.center = (window_width // 2 - 100, 350)
 
 
-start_button = Button(x_cord=game_utils.get_start_quit_button_coords()[0], y_cord=525, width=constants.BUTTON_WIDTH,
+start_button = Button(x_cord=game_utils.get_start_quit_button_coords()[0], y_cord=575, width=constants.BUTTON_WIDTH,
                       height=constants.BUTTON_HEIGHT, inactive_color='#00FF7F',
                       active_color=(0, 255, 0), text='Start', font_color=(255, 255, 255))
 
-quit_button = Button(x_cord=game_utils.get_start_quit_button_coords()[1], y_cord=525, width=constants.BUTTON_WIDTH,
+quit_button = Button(x_cord=game_utils.get_start_quit_button_coords()[1], y_cord=575, width=constants.BUTTON_WIDTH,
                      height=constants.BUTTON_HEIGHT, inactive_color='#DC143C',
                      active_color=(255, 0, 0), text='Quit', font_color=(255, 255, 255))
 
@@ -65,5 +65,10 @@ leaderboard_button = Button(game_utils.get_start_quit_button_coords()[0], y_cord
 back_button = Button(50, y_cord=50, width=constants.BUTTON_WIDTH,
                       height=constants.BUTTON_HEIGHT, inactive_color='#6b7280',
                       active_color='#6b7280', text='Back')
+
+# Create the controls button
+controls_button = Button(game_utils.get_start_quit_button_coords()[0], y_cord=475, width=constants.BUTTON_WIDTH + 100, 
+                         height=constants.BUTTON_HEIGHT + 10, inactive_color='#6b7280',
+                      active_color='#6b7280', text='Controls')
 
 game_music_controller = MusicController()

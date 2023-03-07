@@ -53,6 +53,8 @@ def game_intro_loop(game, restart_game=False):
                 elif game_setup.leaderboard_button.rect.collidepoint(mouse_position):
                     leaderboard_loop(game)
                     intro_loop_running = False
+                elif game_setup.controls_button.rect.collidepoint(mouse_position):
+                    show_controls_screen()
                 elif game_setup.music_button.rect.collidepoint(mouse_position):
                     if not game_setup.game_music_controller.music_on:
                         game_setup.music_button.text = 'ON'
@@ -90,6 +92,7 @@ def game_intro_loop(game, restart_game=False):
         game_setup.display_surface.blit(game_setup.music_text, game_setup.music_text_rect)
         game_setup.music_button.draw(game_setup.display_surface)
         game_setup.leaderboard_button.draw(game_setup.display_surface)
+        game_setup.controls_button.draw(game_setup.display_surface)
         game_setup.start_button.draw(game_setup.display_surface)
         game_setup.quit_button.draw(game_setup.display_surface)
         pygame.draw.rect(game_setup.display_surface, (255, 255, 255), player_name_rect)
@@ -211,3 +214,54 @@ def leaderboard_loop(game):
         # Update the screen
         pygame.display.update()
         game_setup.clock.tick(constants.FPS)
+
+def show_controls_screen():
+    # Create the text for the controls screen
+    title_font = pygame.font.Font(constants.TEXT_FONT, 50)
+    title_text = title_font.render('Controls', True, constants.WHITE)
+    title_rect = title_text.get_rect()
+    title_rect.centerx = constants.WINDOW_WIDTH // 2
+    title_rect.top = 50
+
+    text_font = pygame.font.Font(constants.TEXT_FONT, 24)
+    left_key = text_font.render('LEFT ARROW - Move Left', True, constants.WHITE)
+    left_key_rect = left_key.get_rect()
+    left_key_rect.centerx = constants.WINDOW_WIDTH // 2
+    left_key_rect.top = 150
+    
+    right_key = text_font.render('RIGHT ARROW - Move Right', True, constants.WHITE)
+    right_key_rect = right_key.get_rect()
+    right_key_rect.centerx = constants.WINDOW_WIDTH // 2
+    right_key_rect.top = left_key_rect.bottom + 30
+
+    space_key = text_font.render('SPACE - Fire', True, constants.WHITE)
+    space_key_rect = space_key.get_rect()
+    space_key_rect.centerx = constants.WINDOW_WIDTH // 2
+    space_key_rect.top = right_key_rect.bottom + 30
+
+    # Show the controls screen
+    controls_screen_running = True
+    while controls_screen_running:
+        # Handle events
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                # Handle button clicks
+                mouse_position = pygame.mouse.get_pos()
+                if game_setup.back_button.rect.collidepoint(mouse_position):
+                    controls_screen_running = False
+
+        # Update the screen
+        game_setup.display_surface.blit(game_setup.background, (0, 0))
+        game_setup.display_surface.blit(title_text, title_rect)
+        game_setup.display_surface.blit(left_key, left_key_rect)
+        game_setup.display_surface.blit(right_key, right_key_rect)
+        game_setup.display_surface.blit(space_key, space_key_rect)
+        game_setup.back_button.draw(game_setup.display_surface)
+
+        pygame.display.update()
+        tick = pygame.time.Clock()
+        tick.tick(60)
