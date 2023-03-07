@@ -12,6 +12,8 @@ Space Invaders is a classic arcade video game that was released in 1978. It was 
 
 ## Installation
 
+OS Version: Windows 10
+
 Python version: 3.11.0
 
 Pygame version: 2.2.0
@@ -31,6 +33,10 @@ Run the following command to install the required packages.
 * Use the left and right arrow keys to move the player's spaceship
 * Press the space bar to shoot lasers at the invading aliens
 * If the player's spaceship collides with an alien or an alien reaches the bottom of the screen, the game is over
+
+## Motivation behind the game chosen:
+
+Space Invaders is a classic arcade game many have enjoyed playing for years. The simplicity and challenge of the game inspired me to create my own version of it using Python and Pygame. As this is the first game I am developing, I wanted to build a game that's not easy or difficult but still allows me to learn about the basics of game development. I learned a lot about developing a simple game, which has given me the confidence to build more complex games.
 
 ## Generalization
 
