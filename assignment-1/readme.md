@@ -42,6 +42,24 @@ Space Invaders is a classic arcade game many have enjoyed playing for years. The
 
 I structured the game using object-oriented programming principles to keep the code organized and modular. I created separate classes for the player, enemy, bullet objects. The game loop and event handling were implemented in the main GameLoop class. This approach allowed me to easily add new features and modify existing ones as needed.
 
+The GameLoop class is responsible for starting and managing the game loops, and it contains instances of the Game, Prompt, and Button classes.
+
+The Game class is responsible for managing the game state, including the player score, the player's spaceship, and the alien enemies. It contains instances of the SpaceshipBullet, AlienBullet, and Alien classes.
+
+The Alien class is responsible for representing an enemy alien in the game. It contains information about the alien's position, health, and movement behavior.
+
+The Button class is responsible for representing a clickable button on the screen. It contains information about the button's position, size, and text label.
+
+The Prompt class is responsible for displaying text prompts on the screen. It contains information about the prompt's position, size, and text content.
+
+The SpaceshipBullet class is responsible for representing a bullet fired by the player's spaceship. It contains information about the bullet's position, velocity, and damage.
+
+The AlienBullet class is responsible for representing a bullet fired by an alien enemy. It contains information about the bullet's position, velocity, and damage.
+
+Overall, the GameLoop class manages the game loops, while the Game class manages the game state and contains instances of other game-related classes. The Alien class represents enemy aliens, and the SpaceshipBullet and AlienBullet classes represent bullets fired by the player and aliens, respectively. Finally, the Prompt and Button classes are used for displaying text prompts and clickable buttons on the screen, respectively.
+
+![image](https://user-images.githubusercontent.com/86624773/223579972-938d4229-5a92-4105-8f21-22dfe31d9038.png)
+
 ## Generalization
 
 The game Space Invaders can be generalized to other types of games or applications by modifying the classes and functions to fit the specific requirements of the new game or application. For example, the player class can be modified to fit a platformer game by adding jumping and climbing abilities, while the enemy class can be modified to fit a tower defense game by adding different types of enemies with unique strengths and weaknesses.
