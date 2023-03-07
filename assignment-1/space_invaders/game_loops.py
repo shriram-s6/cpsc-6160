@@ -113,15 +113,12 @@ def main_game_loop(game):
     while main_loop_running:
         # Handle events
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
                 if game_utils.show_confirm_quit_prompt(game):
                     game.score = 0
                     game.round_number = 1
                     game.space_ship.lives = 5
                     game_intro_loop(game, False)
-                    main_loop_running = False
-                else:
-                    game_intro_loop(game, True)
                     main_loop_running = False
 
             if event.type == pygame.KEYDOWN:
