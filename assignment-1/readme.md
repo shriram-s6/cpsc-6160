@@ -35,6 +35,14 @@ Run the following command to install the required packages.
 ## Generalization
 
 ![image](https://user-images.githubusercontent.com/86624773/223448810-21b0c4b2-2ba2-475e-8933-3b240bff2a67.png)
+![image](https://user-images.githubusercontent.com/86624773/223518312-05a0dbe2-f6c8-42b3-a636-793698bf9752.png)
+![image](https://user-images.githubusercontent.com/86624773/223518383-2352a2e8-95a9-4a05-b745-c0fc5d2a90b4.png)
+![image](https://user-images.githubusercontent.com/86624773/223518458-280ace42-b71a-4a5a-a8b5-6a9e671794b9.png)
+![image](https://user-images.githubusercontent.com/86624773/223518528-97fd025c-a03d-4493-a601-7331125e3d26.png)
+![image](https://user-images.githubusercontent.com/86624773/223518611-f68cc93b-c62c-4dd9-987c-9f802498051d.png)
+![image](https://user-images.githubusercontent.com/86624773/223518757-535c9f3b-4ff6-4cf1-9565-3ea7525a5af7.png)
+![image](https://user-images.githubusercontent.com/86624773/223519723-7b256013-a996-411b-bd3d-ffddd103a84c.png)
+
 
 
 ## Future enhancements
