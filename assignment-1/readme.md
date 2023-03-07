@@ -34,7 +34,8 @@ Run the following command to install the required packages.
 
 ## Generalization
 
-![alt text](image.png "Space Invaders Intro Screen")
+![image](https://user-images.githubusercontent.com/86624773/223448810-21b0c4b2-2ba2-475e-8933-3b240bff2a67.png)
+
 
 ## Future enhancements
 
